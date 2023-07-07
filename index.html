@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+    <title>Stock-Search</title>
+</head>
+<body>
+
+    <div id="marquee"></div>
+    <div class="container">
+        <h1>Search Nasdaq Stocks</h1>
+        <div id="form"></div>
+        <div id="results"></div>
+    </div>
+
+    <script src="./js/Marquee.js"></script>
+    <script src="./js/SearchForm.js"></script>
+    <script src="./js/SearchResult.js"></script>
+    <script>
+        (async function () {
+            const marquee = new Marquee(document.getElementById("marquee"));
+            marquee.load();
+            const form = new SearchForm(document.getElementById("form"));
+            const results = new SearchResult(document.getElementById("results"));
+            form.onSearch(async (companies) => {
+                await results.renderResults(companies);
+            })
+        })()
+    </script>
+    
+</body>
+</html>

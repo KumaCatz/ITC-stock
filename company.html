@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+    <title>Company-Profile</title>
+</head>
+<body>
+
+    <div id="marquee-container" class="marquee-container"></div>
+    <div class="container">
+        <div class="profile-info">
+            <div id="logoImage"></div>
+            <div id="compName"></div>
+        </div>
+        <div class="stockPrice">
+            <div id="stockCurrent" class="stock-current"></div>
+            <div id="stockChangesProfile"></div>
+        </div>
+        <div id="description"></div>
+        <div id="compWebsiteDiv" class="comp-website"></div>
+        <div>
+            <canvas id="compChart"></canvas>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/companyProfile.js"></script>
+</body>
+</html>

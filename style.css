@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.marquee-container {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    max-width: 100%;
+}
+
+.marquee {
+    width: fit-content;
+    white-space: nowrap;
+    animation: marquee-slide 2600s linear infinite;
+}    
+
+.container {
+    width: 65vw;
+    height: auto;
+    margin: auto;
+    margin-top: calc(5vh + 18.8px);
+    margin-bottom: 5vh;
+    padding: 3%;
+    padding-top: 1.5%;
+    display: flex;
+    flex-flow: column nowrap;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: #1b1b1b;
+}
+
+.profile-info {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+}
+
+.logo-image {
+    width: 4.5rem;
+    height: 4.5rem;
+    margin-right: 1em;
+}
+
+.stockPrice {
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 1.2rem;
+    padding-bottom: 0.65rem;
+    align-items: center;
+}
+
+.stock-current {
+    padding-right: .3em;
+}
+
+.comp-website {
+    margin: 0.3rem 0 1rem 0;
+}
+
+.search-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.search-input {
+    font-size: 1.2em;
+    width: 100%;
+}
+
+.search-btn {
+    border: solid 2px;
+    padding: 0.3rem;
+    background-color: rgb(142, 199, 255);
+    border-radius: 2px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    font-size: 1.2em;
+}
+
+.results-container {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+    margin-top: 4%;
+}
+
+.results-item {
+    display: flex;
+    align-items: center;
+}
+
+.results-img {
+    width: 1.7rem;
+    height: 1.7rem;
+    margin-right: 1em;
+}
+
+.results-link {
+    text-decoration: none;
+    margin-right: .2rem;
+}
+
+.results-stock-changes {
+    margin-left: .15em;
+}
+
+.results-symbol-percentage {
+    display: flex;
+    color: #6D7884;
+    font-size: small;
+    margin-left: .2em;
+}
+
+.results-line {
+    border-top: solid 2px #939393;
+    width: 100%;
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
+.loader {
+    border: 10px solid #000000;
+    border-top: 10px solid #ffffff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+    box-sizing: border-box;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes marquee-slide {
+    0% {transform: translateX(0.41%);}
+    100% {transform: translateX(-100%)}
+}
+
+.changes-positive {
+    color: green;
+}
+
+.changes-negative {
+    color: red;
+}
+
+.highlight {
+    background-color: yellow;
+}
